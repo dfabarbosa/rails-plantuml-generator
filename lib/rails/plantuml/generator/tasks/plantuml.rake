@@ -1,6 +1,6 @@
 require 'rails/plantuml/generator/model_generator'
 
-OUTPUT_FILE = 'diagramm.puml'
+OUTPUT_FILE = 'diagram_er.puml'
 
 ASSOCIATION_TYPE = :association_type
 ASSOCIATION_OTHER_CLASS = :other_class

@@ -63,6 +63,7 @@ module Rails
 
         def write_to_io(io)
           io.puts '@startuml'
+          io.puts 'allowmixing'
 
           @models.each do |model|
             write_class model, io
@@ -87,7 +88,7 @@ module Rails
             columns -= parent.columns_hash.keys if class_relevant? parent
 
             columns.each do |column|
-              io.puts "    #{column}"
+              io.puts "    #{column} : #{clazz.columns_hash[column].type}"
             end
           end
 
