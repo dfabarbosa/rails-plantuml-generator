@@ -63,6 +63,7 @@ module Rails
 
         def write_to_io(io)
           io.puts '@startuml'
+          io.puts 'allowmixing'
 
           @models.each do |model|
             write_class model, io
